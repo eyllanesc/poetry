@@ -5,7 +5,6 @@ import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
 from typing import Any
-from typing import Dict
 from typing import Mapping
 from typing import Union
 
@@ -24,7 +23,7 @@ if TYPE_CHECKING:
 
     from poetry.repositories import Pool
 
-Requirements = Dict[str, Union[str, Mapping[str, Any]]]
+    Requirements = dict[str, Union[str, Mapping[str, Any]]]
 
 
 class InitCommand(Command):
