@@ -6,7 +6,7 @@ from collections import defaultdict
 from contextlib import contextmanager
 from typing import TYPE_CHECKING
 from typing import FrozenSet
-from typing import Tuple
+from typing import TypeAlias
 from typing import TypeVar
 
 
@@ -186,7 +186,7 @@ class Solver:
         return final_packages, depths
 
 
-DFSNodeID = Tuple[str, FrozenSet[str], bool]
+DFSNodeID: TypeAlias = tuple[str, FrozenSet[str], bool]
 
 T = TypeVar("T", bound="DFSNode")
 
