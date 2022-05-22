@@ -10,7 +10,6 @@ from typing import TYPE_CHECKING
 from typing import Dict
 from typing import List
 from typing import TypeVar
-from typing import Union
 from typing import cast
 
 from poetry.core.packages.dependency import Dependency
@@ -24,7 +23,7 @@ if TYPE_CHECKING:
     from poetry.utils.env import Env
 
 
-DependencySpec = Dict[str, Union[str, bool, Dict[str, Union[str, bool]], List[str]]]
+DependencySpec = Dict[str, str | bool | Dict[str, str | bool] | List[str]]
 
 
 def _parse_dependency_specification_git_url(

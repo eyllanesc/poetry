@@ -7,7 +7,6 @@ from typing import TYPE_CHECKING
 from typing import Any
 from typing import Dict
 from typing import Mapping
-from typing import Union
 
 from cleo.helpers import option
 from tomlkit import inline_table
@@ -24,7 +23,7 @@ if TYPE_CHECKING:
 
     from poetry.repositories import Pool
 
-Requirements = Dict[str, Union[str, Mapping[str, Any]]]
+Requirements = Dict[str, str | Mapping[str, Any]]
 
 
 class InitCommand(Command):
